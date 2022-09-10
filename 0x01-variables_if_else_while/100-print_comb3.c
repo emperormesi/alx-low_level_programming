@@ -19,7 +19,7 @@ int main(void)
 		e = x % 10;
 		putchar((d) + '0');
 		putchar((e) + '0');
-		if (d == e)
+		if (d = e)
 		{
 			putchar('\n');
 		}
