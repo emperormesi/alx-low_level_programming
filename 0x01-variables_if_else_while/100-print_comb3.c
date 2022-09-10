@@ -9,25 +9,28 @@
  */
 int main(void)
 {
-	int x;
-	int d;
-	int e;
+	int i;
+	int j;
 
-	for (x = 1;  x < 90; x++)
+	for (i = 1;  i < 90; i++)
 	{
-		d = x / 10;
-		e = x % 10;
-		putchar((d) + '0');
-		putchar((e) + '0');
-		if (d == e)
+		for (j = 0; j < 90; j++)
 		{
-		x = x + 1;
-		}
-		if (x != 89)
-		{
-			putchar(',');
-			putchar(' ');
+			if (j > i)
+			{
+				putchar((i / 10) + '0');
+				putchar((j % 10) + '0');
+				putchar(' ');
+				putchar((j / 10) + '0');
+				putchar((j % 10) + '0');
+				if (i != 89)
+				{
+					putchar(',');
+					putchar(' ');
+				}
+			}
 		}
 	}
+	putchar('\n');
 	return (0);
 }
