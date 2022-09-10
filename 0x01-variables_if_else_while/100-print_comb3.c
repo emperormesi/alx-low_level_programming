@@ -10,11 +10,19 @@
 int main(void)
 {
 	int x;
+	int d;
+	int e;
 
-	for (x = 0;  x < 90; x++)
+	d = x / 10;
+	e = x % 10;
+	for (x = 1;  x < 90; x++)
 	{
-		putchar((x / 10) + '0');
-		putchar((x % 10) + '0');
+		putchar((d) + '0');
+		putchar((e) + '0');
+		if (d == e)
+		{
+			putchar('\n');
+		}
 		if (x != 89)
 		{
 			putchar(',');
